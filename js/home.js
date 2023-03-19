@@ -32,3 +32,8 @@ function calculateTotal() {
 $(function () {
   $("#qty_kg").on("change keyup", calculateTotal);
 });
+
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
