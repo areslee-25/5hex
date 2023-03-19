@@ -1018,8 +1018,56 @@ button {
   color: #ef5051;
 }
 
-.contact-view {
-  /* display: flex; */
+.calculator {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.title_caculator {
+  font-size: 18px;
+  text-align: center;
+  align-self: ce;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.qty {
+  width: 60%;
+  height: 60px;
+  border: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #767676;
+  border-radius: 100rem;
+}
+
+.total-val {
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+}
+
+.title_caculator {
+  text-align: center;
+  font-size: 1rem;
+}
+
+#total_value {
+  font-size: 1.3rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+  color: white;
 }
 
 .fixedButton {
