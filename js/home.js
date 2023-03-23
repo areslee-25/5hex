@@ -1,6 +1,6 @@
 function calculateTotal() {
   let unit_price = {
-    akg: 50,
+    akg: 110,
     bkg: 24,
     ckg: 22,
     dkg: 20,
@@ -8,17 +8,17 @@ function calculateTotal() {
   var total;
   let numberKg = Math.ceil($("#qty_kg").val());
   switch (true) {
-    case numberKg <= 1:
-      total = numberKg * unit_price.akg;
+    case numberKg <= 3:
+      total = unit_price.akg;
       break;
-    case 1 < numberKg && numberKg < 16:
-      total = numberKg * unit_price.bkg;
+    case 3 < numberKg && numberKg < 16:
+      total = (numberKg - 3) * unit_price.bkg + unit_price.akg;
       break;
     case 16 <= numberKg && numberKg <= 30:
-      total = numberKg * unit_price.ckg;
+      total = (numberKg - 3) * unit_price.ckg + unit_price.akg;
       break;
     case 31 <= numberKg:
-      total = numberKg * unit_price.dkg;
+      total = (numberKg - 3) * unit_price.dkg + unit_price.akg;
       break;
   }
   $("#total_value").text(
